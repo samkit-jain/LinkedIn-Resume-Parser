@@ -3,6 +3,45 @@
 Usage:
 `python linkedin_scraper.py /path/to/docx`
 
+Gives you:
+```python
+response = {
+  'name': 'name',
+  'email': 'email',
+  'experience': [{
+    'post': '',
+    'company': '',
+    'description': '',
+    'start_date': '',
+    'end_date': '',
+    'time_period': ''
+    }],
+  'education': [],
+  'courses': [],
+  'projects': [{
+    'name': '',
+    'start_date': '',
+    'end_date': '',
+    'description': ''
+    }],
+  'certifications': [],
+  'skills': [],
+  'patents': [{
+    'name': '',
+    'id': '',
+    'description': ''
+    }],
+  'languages': [],
+  'honors': [{
+    'title': '',
+    'issuer': '',
+    'description': ''
+    }],
+  'organizations': [],
+  'other': ''
+}
+```
+
 To export your LinkedIn profile as PDF:
 1. Click the Me icon at the top of your LinkedIn homepage and select View profile, or navigate to someone else's profile.
 2. Click the  More icon in the top section of the profile, to the right of the picture.
