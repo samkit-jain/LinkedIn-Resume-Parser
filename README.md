@@ -1,7 +1,7 @@
 # LinkedIn-Resume-Parser
 
 Usage:
-`python linkedin_scraper.py /home/samkit/Downloads/SamkitJainProfile.docx`
+`python linkedin_scraper.py /path/to/docx`
 
 To export your LinkedIn profile as PDF:
 1. Click the Me icon at the top of your LinkedIn homepage and select View profile, or navigate to someone else's profile.
