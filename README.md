@@ -1,10 +1,20 @@
 # LinkedIn-Resume-Parser
 
+Usage:
+`python linkedin_scraper.py /home/samkit/Downloads/SamkitJainProfile.docx`
+
 To export your LinkedIn profile as PDF:
 1. Click the Me icon at the top of your LinkedIn homepage and select View profile, or navigate to someone else's profile.
 2. Click the  More icon in the top section of the profile, to the right of the picture.
 3. Select  Save to PDF.
 4. The PDF file will be downloaded and saved to the default download location on your computer. Once you open the file, you can print it.
+
+
+To convert PDF as DOCX:
+1. Visit [pdf2docx.com](pdf2docx.com)
+2. Upload PDF
+3. Click Convert
+4. Download DOCX file
 
 # LICENSE
 
