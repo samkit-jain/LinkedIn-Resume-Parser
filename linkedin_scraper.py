@@ -1,3 +1,6 @@
+import sys
+import subprocess
+import os
 from docx import *
 from docx.dml.color import ColorFormat
 from docx.text.run import Font, Run
@@ -18,7 +21,7 @@ def parse_resume(loc):
 		'languages': [],
 		'honors': [],
 		'organizations': [],
-		'other': 'other'
+		'other': ''
 	}
 
 	i = 0
@@ -260,10 +263,27 @@ def parse_resume(loc):
 			elif run.font.size.pt == 13.0:
 				response['email'] = run.text
 
+			else:
+				response['other'] += ' ' + run.text
+
 
 	response['courses'] = response['courses'][2:]
 
 	return response
 
 
-print parse_resume('/home/samkit/Downloads/SamkitJainProfile (copy).docx')
+if __name__ == '__main__':
+	if not len(sys.argv) == 2:
+		print "usage: python linkedin_scraper.py <filename>"
+	else:
+		"""
+		#for pdf to docx
+		if sys.argv[1][-4:] == '.pdf':
+			# this is not working 
+			#subprocess.call('lowriter --invisible --convert-to docx "{}"'.format(sys.argv[1]), shell=True)
+			print parse_resume(os.getcwd() + '/' + sys.argv[1].rsplit('/', 1)[-1][:-3] + 'docx')
+		"""
+		if sys.argv[1][-5:] == '.docx':
+			print parse_resume(sys.argv[1])
+		else:
+			print "Only DOCXs allowed"
